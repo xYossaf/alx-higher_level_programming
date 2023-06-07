@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-lastdigit = int(str(number)[:-1])
+if number < 0:
+    lastdigit = ((number * -1) % 10) * -1
+else:
+    lastdigit = number % 10
 lasttext = ""
 if lastdigit > 5:
     lasttext = "and is greater than 5"
